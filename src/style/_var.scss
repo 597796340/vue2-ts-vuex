@@ -1,0 +1,100 @@
+$color-primary:#31c27c;
+$header-background: $color-primary;
+$header-height: 44px;
+$logo-height: 25px;
+$body-background:#f4f4f4;
+$nav-item-height:40px;
+$nav-item-color:rgba(0,0,0,.6);
+$nav-item-active:$color-primary;
+$blue: #3190e8;
+$bc: #e4e4e4;
+$fc:#fff;
+$left-mar:20px;
+
+// 背景图片地址和大小
+@mixin bis($url) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+//定位全屏
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+//transform上下左右居中
+@mixin ctt {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//定位上下左右居中
+@mixin ctp($width, $height) {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+}
+
+//定位上下居中
+@mixin tb {
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位左右居中
+@mixin lr {
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+
+//字体大小、行高、字体
+@mixin ft($size, $line-height) {
+	font-size: $size;
+	line-height:$line-height;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between){
+	display: flex;
+	justify-content: $type;
+}
+
+// 菜单栏样式
+@mixin menu-style{
+  border: 0;
+  text-align: left;
+}
+
+// 时间选择器样式
+@mixin pk-style{
+  float: left;
+  margin-left: $left-mar;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+// 表格样式
+@mixin table-style {
+  padding-left: $left-mar;
+}
